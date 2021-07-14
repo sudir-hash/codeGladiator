@@ -1,2 +1,2 @@
 # codingGladiator
-completed debugging exercise for coding gladiator
+completed debugging exercise for code gladiator

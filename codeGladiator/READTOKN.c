@@ -20,7 +20,7 @@ static char nextchar(void)
   /*    ⁄      pop 5, pop 20, divide, push result (4)                   */
   /*    =      output value on the top of the stack (4)                 */
   /*--------------------------------------------------------------------*/
-  char *buf_in = "2 18 + = 5 / = ";
+  char *buf_in = "2 18 + = 5 / = "; //changed input buffer  / to /
   static int index = 0; /* starts at 0 */
   /*starts at 0 */
   char ret;
@@ -38,7 +38,7 @@ Token read_token(char buf[])
   int i;
   char c;
   // skip leading white space
-  for (c = nextchar(); !isspace(c); c = nextchar())
+  for (c = nextchar(); !isspace(c); c = nextchar()) // changed isspace(c) to !isspace(c) for skipping whitespaces
   {
     buf[0] = c; /* get ready to return single char e.g."+" */
     buf[1] = 0;
@@ -51,7 +51,7 @@ Token read_token(char buf[])
       return T_MINUS;
     case '*':
       return T_TIMES;
-    case '/':
+    case '/': //changed  / to /
       return T_DIVIDE;
     case '=':
       return T_EQUALS;

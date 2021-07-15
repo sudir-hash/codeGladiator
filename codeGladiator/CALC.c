@@ -5,8 +5,8 @@
 /*--------------------------------------------------------------------*/
 #include <stdio.h>
 #include <stdlib.h>
-#include "PUSHPOP.c"
-#include "READTOKN.c"
+#include "PUSHPOP.c" // included PUSHPOP.c
+#include "READTOKN.c" // include "READTOKN.c"
 IntStack stack = {0};
 int main()
 {
@@ -43,7 +43,7 @@ int main()
     case T_EQUALS:
       num = pop(&stack);
       sprintf(buf_out, "= %d ", num);
-      printf("%s", buf_out);
+      printf("%s", buf_out); // added printf statement to print the buffer
       push(&stack, num);
       break;
     }

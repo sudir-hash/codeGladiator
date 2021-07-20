@@ -8,7 +8,7 @@
 #include "PUSHPOP.c" // included PUSHPOP.c
 #include "READTOKN.c" // include "READTOKN.c"
 IntStack stack = {0};
-int main()
+int main() // changed return type to main
 {
   Token tok;
   char word[100];
